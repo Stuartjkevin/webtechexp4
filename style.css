@@ -1,0 +1,300 @@
+/* Name: Stuart J | Reg No: URK24CS1020 */
+
+/* General */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fc;
+    color: #263247;
+    line-height: 1.6;
+}
+
+/* Header */
+.hero {
+    background: linear-gradient(135deg, #4A90E2, #6A5ACD);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 12px 0 0;
+}
+
+/* Rounded button */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.download-btn:hover {
+    background: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+/* Showcase with multiple backgrounds */
+.app-showcase {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 45px max(7%, 24px);
+    color: white;
+    background-image:
+        radial-gradient(circle at 85% 25%, rgba(255,255,255,.18), transparent 28%),
+        linear-gradient(to right, #4A90E2, #6A5ACD);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right center, center;
+    background-size: cover, cover;
+}
+
+.showcase-content {
+    max-width: 560px;
+}
+
+.showcase-content h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    line-height: 1.2;
+}
+
+.phone-art {
+    width: 145px;
+    height: 235px;
+    flex: 0 0 auto;
+    padding: 9px;
+    border: 4px solid #e9efff;
+    border-radius: 25px;
+    background: #202b48;
+    box-shadow: 0 15px 30px rgba(20, 25, 60, .25);
+    transform: rotate(7deg);
+}
+
+.phone-screen {
+    height: 100%;
+    border-radius: 15px;
+    background: #f8faff;
+    color: #4A90E2;
+    padding: 17px 10px;
+    text-align: center;
+}
+
+.phone-dot {
+    display: block;
+    width: 24px;
+    height: 4px;
+    margin: -8px auto 12px;
+    border-radius: 5px;
+    background: #202b48;
+}
+
+.phone-line, .phone-card {
+    height: 9px;
+    margin-top: 15px;
+    border-radius: 6px;
+    background: #dce7ff;
+}
+
+.phone-card {
+    height: 35px;
+    margin-top: 12px;
+    background: linear-gradient(120deg, #dce7ff, #b9d2ff);
+}
+
+.phone-card.short {
+    width: 70%;
+}
+
+/* Features section */
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.feature-box {
+    width: 250px;
+    background: white;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.13);
+}
+
+.feature-icon {
+    font-size: 32px;
+}
+
+/* Download form */
+.download-form {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+}
+
+.download-form form {
+    width: min(100%, 360px);
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.download-form label {
+    margin: 8px 0 3px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 12px;
+    border: 1px solid #b9c4d5;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid green;
+    box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.1);
+}
+
+input:required {
+    background: #fff8dc;
+}
+
+input[type="email"]:valid {
+    color: blue;
+}
+
+input[type="email"]:invalid {
+    color: red;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background: #3578c8;
+}
+
+.form-message {
+    min-height: 24px;
+    margin: 10px 0 0;
+    color: #187044;
+    font-weight: bold;
+}
+
+/* Pricing table */
+.pricing-section {
+    padding: 35px 20px 45px;
+    text-align: center;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: min(70%, 650px);
+    margin: 20px auto 0;
+    border-collapse: collapse;
+    background: white;
+}
+
+table td, table th {
+    border: 1px solid #ccc;
+    padding: 12px;
+}
+
+table tr:nth-child(odd) {
+    background: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background: #dbeeff;
+}
+
+table tr:hover {
+    background: #ffe082;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+    .app-showcase {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 22px;
+    }
+
+    .phone-art {
+        width: 125px;
+        height: 205px;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .features {
+        padding: 25px 15px;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+}
